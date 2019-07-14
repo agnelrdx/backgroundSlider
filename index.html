@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,100,300,400,500,600,700&display=swap">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="assets/custom.css">
+    <title>Single Page</title>
+  </head>
+  <body>
+    <div class="page-wrapper" id="container">
+      <div id="resizable" class="ui-state-active">
+        <div class="icon">
+          <i class="ion ion-md-arrow-dropleft"></i>
+          <i class="ion ion-md-arrow-dropright"></i>
+        </div>
+      </div>
+      <div class="container-fluid px-5">
+        <div class="header">
+          <a class="logo" href="index.html">Logo</a>
+          <ul class="nav">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <a href="#" class="menuIcon">
+            <i class="ion ion-md-remove"></i>
+          </a>
+        </div>
+        <div class="content">
+          <div class="col">
+            <h1>Creative Design</h1>
+            <p>Award Winning Digital Agency in Dubai</p>
+            <button class="readMore text-center trans">Read More</button>
+          </div>
+          <div class="social">
+            <ul>
+              <li><a href="#"><i class="ion ion-logo-youtube"></i></a></li>
+              <li><a href="#"><i class="ion ion-logo-instagram"></i></a></li>
+              <li><a href="#"><i class="ion ion-logo-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="megaMenu">
+        <i class="ion ion-ios-close close"></i>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#resizable" ).resizable({
+          containment: "#container"
+        });
+
+        $('.megaMenu .close').click(function() {
+          $('.megaMenu').fadeOut();
+        });
+
+        $('.menuIcon').click(function() {
+          $('.megaMenu').fadeIn();
+        });
+      });
+    </script>
+  </body>
+</html>
